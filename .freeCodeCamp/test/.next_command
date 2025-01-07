@@ -10,3 +10,7 @@ git status
 git add .gitignore
 git push
 echo hello SQL
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+psql --username=freecodecamp --dbname=postgres -c 'create database test;'
+psql --username=freecodecamp --dbname=postgres
