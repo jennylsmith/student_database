@@ -1,0 +1,12 @@
+git pull --rebase
+git status
+git status
+git log
+git push
+git pull
+git pull --ff-only
+git pull --no-rebase
+git status
+git add .gitignore
+git push
+echo hello SQL
