@@ -16,3 +16,4 @@ psql --username=freecodecamp --dbname=postgres -c 'create database test;'
 psql --username=freecodecamp --dbname=postgres
 psql --username=freecodecamp --dbname=postgres
 psql --username=freecodecamp --dbname=postgres -c 'create database students;'
+psql --username=freecodecamp --dbname=postgres
