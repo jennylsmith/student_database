@@ -55,3 +55,4 @@ psql -U freecodecamp -d students -f students.sql
 psql --username=freecodecamp --dbname=postgres
 psql --username=freecodecamp --dbname=postgres -c 'create database students;'
 psql -U freecodecamp -d students -f students.sql
+psql -U freecodecamp -d students
