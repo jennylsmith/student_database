@@ -12,6 +12,7 @@ psql -U postgres < students.sql
 # psql -U freecodecamp -d students
 
 
+#### Set-up gh CLI to make a fork
 uname -p
 wget https://github.com/cli/cli/releases/download/v2.65.0/gh_2.65.0_linux_amd64.tar.gz
 export PATH=$PATH:/workspace/gh_2.65.0_linux_amd64/bin
@@ -19,6 +20,7 @@ gh auth login
 gh repo fork --fork-name 'student_database' --remote
 gh repo set-default jennylsmith/student_database
 
+#### if starting from a new VM 
 git branch -b part1
 # if starting from a new VM if say you closed the web browser tab, etc. 
 # then add the forked remote as origin
@@ -27,3 +29,10 @@ git remote set-url origin https://github.com/jennylsmith/student_database.git
 # set the branch to track the remote branch
 git branch -u origin part1
 # futz around with git pull / git merge... 
+
+### LOGOUT 
+gh auth logout
+# if you forget, 
+  # 1. use history in browser to re-open the VM 
+  # 2. use gh settings page to list active sessions (logged in devices), to revoke access
+  # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/viewing-and-managing-your-sessions 
