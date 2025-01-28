@@ -11,8 +11,19 @@ psql -U postgres < students.sql
 # # connect to the DB
 # psql -U freecodecamp -d students
 
-git branch -b jsmith
+
+uname -p
+wget https://github.com/cli/cli/releases/download/v2.65.0/gh_2.65.0_linux_amd64.tar.gz
+export PATH=$PATH:/workspace/gh_2.65.0_linux_amd64/bin
+gh auth login
+gh repo fork --fork-name 'student_database' --remote
+gh repo set-default jennylsmith/student_database
+
+git branch -b part1
+# if starting from a new VM if say you closed the web browser tab, etc. 
+# then add the forked remote as origin
 git remote add upstream https://github.com/freeCodeCamp/learn-sql-by-building-a-student-database-part-1.git
 git remote set-url origin https://github.com/jennylsmith/student_database.git
-git branch -u origin/jsmith
+# set the branch to track the remote branch
+git branch -u origin part1
 # futz around with git pull / git merge... 
