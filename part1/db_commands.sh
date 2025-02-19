@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pg_dump -Cc -U freecodecamp bikes > bikes.sql
+
 psql -U postgres < students.sql
 
 # pg_dump --username=freecodecamp --dbname=students > students.sql 
@@ -14,11 +16,12 @@ psql -U postgres < students.sql
 
 #### Set-up gh CLI to make a fork
 uname -p
-wget https://github.com/cli/cli/releases/download/v2.65.0/gh_2.65.0_linux_amd64.tar.gz
+wget -P /workspace/ -c https://github.com/cli/cli/releases/download/v2.65.0/gh_2.65.0_linux_amd64.tar.gz && tar -C /workspace/ -xvf /workspace/gh_2.65.0_linux_amd64.tar.gz
 export PATH=$PATH:/workspace/gh_2.65.0_linux_amd64/bin
 gh auth login
-gh repo fork --fork-name 'student_database' --remote
-gh repo set-default jennylsmith/student_database
+DB_NAME='student_database'
+gh repo fork --fork-name $DB_NAME --remote
+gh repo set-default jennylsmith/$DB_NAME
 
 #### if starting from a new VM 
 git branch -b part1
